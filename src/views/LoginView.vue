@@ -3,8 +3,8 @@
     <div class="login1">
       <input type="text" placeholder="아이디를 입력하세요.">
       <input type="text" placeholder="비밀번호를 입력하세요.">
+      <p  class="login-signup" @click="goToSignUp">회원가입 ></p>
       <button @click="goToStart">로그인</button>
-      <p @click="goToSignUp">회원가입</p>
     </div>
   </div>
 </template>
@@ -57,5 +57,13 @@
   border: none;
   padding: 0 30px;
 }
-
+.login-signup{
+  color: #FFF;
+  font-size: 16px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 200px;
+}
 </style>

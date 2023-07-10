@@ -4,8 +4,8 @@
       <input type="text" placeholder="아이디를 입력하세요.">
       <input type="text" placeholder="비밀번호를 입력하세요.">
       <input type="text" placeholder="비밀번호를 재입력하세요.">
-    </div>
     <button @click="goToSignUpComplete">회원가입</button>
+  </div>
   </div>
 </template>
 
@@ -50,5 +50,8 @@ export default {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border: none;
   padding: 0 30px;
+}
+.signup1 button{
+  margin-top: 20px;
 }
 </style>

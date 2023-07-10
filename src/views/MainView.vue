@@ -1,7 +1,7 @@
 <template>
     <div class="main_logo">
       <img src="../assets/logo.png" alt="">
-      <button @click="goToLogin">로그인</button>
+      <button class="main-button" @click="goToLogin">로그인</button>
     </div>
 </template>
   
@@ -20,18 +20,29 @@
   </script> 
  
  <style>
-
-.main_logo{
+.main_logo {
   background-color: #FF9356;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  position: relative;
+  height: 100%;
 }
-.main_logo img{
+
+.main_logo img {
   width: 900px;
   height: 100%;
   padding: 20px;
 }
 
+.main-button {
+  margin: 20px;
+  width: 156px;
+  height: 54px;
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: #FF5C00;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 </style>
 

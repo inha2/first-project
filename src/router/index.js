@@ -8,6 +8,7 @@ import StartComponent from '../views/StartView.vue'
 import QuizComponent from '../views/QuizView.vue'
 import CorrectComponent from '../views/Correct.vue'
 import IncorrectComponent from '../views/Incorrect.vue'
+import QuizCompleteComponent from '../views/QuizComplete.vue'
 Vue.use(VueRouter);
 
 // 라우트 정보
@@ -56,6 +57,11 @@ const router = new VueRouter({
           path: '/incorrect',
           name:"incorrect",
           component: IncorrectComponent,
+        },
+        {
+          path: '/quizComplete',
+          name:"quizComplete",
+          component: QuizCompleteComponent,
         }
         // 추가 경로 및 컴포넌트 설정
       ],
