@@ -16,7 +16,18 @@
     <p v-if="showCorrectAnswer">
       정답은 "{{ getCorrectAnswer().join(", ") }}"입니다.
     </p>
-    <button class="quiz-button" v-if="answered" @click="nextQuestion">
+    <button
+      class="quiz-button"
+      v-if="answered && currentIndex < images.length - 1"
+      @click="nextQuestion"
+    >
+      다음 문제
+    </button>
+    <button
+      class="quiz-button"
+      v-else-if="answered && currentIndex === images.length - 1"
+      @click="goToQuizComplete"
+    >
       다음 문제
     </button>
   </div>
@@ -80,6 +91,9 @@ export default {
       }
       return array;
     },
+    goToQuizComplete() {
+      this.$router.push("/quizComplete");
+    },
   },
   created() {
     this.getRandomImages();
@@ -125,7 +139,7 @@ export default {
   border: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.quiz-all span{
+.quiz-all span {
   color: #FFF;
   font-size: 24px;
   font-family: Inter;
@@ -133,7 +147,7 @@ export default {
   font-weight: 700;
   line-height: normal;
 }
-.quiz-all p{
+.quiz-all p {
   color: #FFF;
   text-align: center;
   font-size: 24px;
