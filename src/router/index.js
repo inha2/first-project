@@ -7,6 +7,7 @@ import SignUpCompleteComponent from '../views/SignUpComplete.vue'
 import StartComponent from '../views/StartView.vue'
 import QuizComponent from '../views/QuizView.vue'
 import CorrectComponent from '../views/Correct.vue'
+import IncorrectComponent from '../views/Incorrect.vue'
 Vue.use(VueRouter);
 
 // 라우트 정보
@@ -17,7 +18,7 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-          path: '/main',
+          path: '/',
           name:"main",
           component: MainComponent,
         },
@@ -50,9 +51,15 @@ const router = new VueRouter({
           path: '/correct',
           name:"correct",
           component: CorrectComponent,
+        },
+        {
+          path: '/incorrect',
+          name:"incorrect",
+          component: IncorrectComponent,
         }
         // 추가 경로 및 컴포넌트 설정
       ],
 });
+
 
 export default router;

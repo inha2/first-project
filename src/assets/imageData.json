@@ -1,0 +1,100 @@
+{
+    "data" : [
+        {
+            "answer": ["채령"],
+            "path":"../images/cheryung.jpg"
+        },
+        {
+            "answer": ["채원"],
+            "path":"../images/chewon.jpeg"
+        },
+        {
+            "answer": ["최예나"],
+            "path":"../images/choiyena.jpg"
+        },
+        {
+            "answer": ["공유"],
+            "path":"../images/gongyou.jpg"
+        },
+        {
+            "answer": ["권상우"],
+            "path":"../images/gwonsangwoo.jpg"
+        },
+        {
+            "answer": ["하정우"],
+            "path":"../images/hajeongwoo.jpg"
+        },
+        {
+            "answer": ["한소희"],
+            "path":"../images/hansohee.jpg"
+        },
+        {
+            "answer": ["한수아"],
+            "path":"../images/hansooa.jpg"
+        },
+        {
+            "answer": ["황정민"],
+            "path":"../images/hwangjeongmin.png"
+        },
+        {
+            "answer": ["아이린"],
+            "path":"../images/irin.jpeg"
+        },
+        {
+            "answer": ["장원영"],
+            "path":"../images/jangwonyong.jpg"
+        },
+        {
+            "answer": ["강민"],
+            "path":"../images/kangmin.jpg"
+        },
+        {
+            "answer": ["김다미"],
+            "path":"../images/kimdami.jpg"
+        },
+        {
+            "answer": ["김고은"],
+            "path":"../images/kimgoeun.jpg"
+        },
+        {
+            "answer": ["김수현"],
+            "path":"../images/kimsoohyun.jpg"
+        },
+        {
+            "answer": ["김태리"],
+            "path":"../images/kimtaelee.jpg"
+        },
+        {
+            "answer": ["이정재"],
+            "path":"../images/leejeongjae.jpg"
+        },
+        {
+            "answer": ["마동석"],
+            "path":"../images/madongsuk.jpg"
+        },
+        {
+            "answer": ["박은진"],
+            "path":"../images/parkeunjin.jpeg"
+        },
+        {
+            "answer": ["박나래"],
+            "path":"../images/parknarae.jpeg"
+        },
+        {
+            "answer": ["설아"],
+            "path":"../images/seola.jpg"
+        },
+        {
+            "answer": ["뷔","브이"],
+            "path":"../images/v.jpg"
+        },
+        {
+            "answer": ["윌 스미스","윌스미스","will smith"],
+            "path":"../images/willsmith.jpg"
+        },
+        {
+            "answer": ["윤아"],
+            "path":"../images/yoona.jpg"
+        }
+    ]
+}
