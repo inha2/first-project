@@ -14,24 +14,27 @@
             <p v-if="$route.query.data==8">상위 20% 입니다!</p>
             <p v-if="$route.query.data==9">상위 10% 입니다!</p>
             <p v-if="$route.query.data==10">상위 1% 입니다!</p>
+            <div class="quiz_complete_share">
+              <span class="kakao">카톡 공유하기</span>
+              <span class="home">홈으로</span>
+          </div>
         </div>
-        <div class="quiz_complete_share">
-            <span class="kakao">카톡 공유하기</span>
-            <span class="home">홈으로</span>
-        </div>
-        <div>
+ 
+        <div class="quiz_complete_input_wrap">
             <div class="quiz_complete_input">
-                <p>내용을 입력하세요(최대 200자)</p>
+                <input type="value" placeholder="내용을 입력하세요(최대 200자)" class="quiz_comment">
                 <input type="text" placeholder="닉네임">
                 <input type="text" placeholder="비밀번호">
-                <button @click="pop">작성하기</button>
+                <button class="quiz_complete_button">작성하기</button>
             </div>
-            <div class="quiz_complete_date">
-                <span>닉네임</span>
+          </div>
+            <div class="quiz_complete_user">
+              <div class="quiz_complete_date">
+                <span >인하</span>
                 <span>2023-07-04 09:23:56</span>
-                <span>재밌네요</span>
+              </div>
+                <span class="fun">재밌네요</span>
             </div>
-        </div>
     </div>
   </template>
   <script>
@@ -98,7 +101,8 @@
       this.pop(); // 폭죽 애니메이션 실행
     }
   };
-  </script>  <style>
+  </script>  
+  <style>
   .quiz_complete {
     display: flex;
     flex-direction: column;
@@ -108,39 +112,32 @@
     height: 900px;
     text-align: center;
   }
-  
+  .quiz_complete_user{
+    background: #FBE9E9;
+    width: 100%;
+    height: 100%;
+  }
+  .quiz_complete_date{
+    flex-direction: column;
+  }
+.fun{
+  margin-right: 70px;
+}
   .quiz_complete img {
     width: 200px;
     height: 120px;
     margin-bottom: 20px;
   }
-  
   .quiz_complete_content {
     margin-bottom: 20px;
     width: 1030px;
     height: 358.356px;
     background: #FFB648;
   }
-  .quiz_complete_input{
-    width: 620px;
-    height: 95px;   
-    border-radius: 20px;
-    background: #FFC582;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
-  }
-  .quiz_complete_input p{
-    color: #999;
-  }
-  .quiz_complete_input input{
-    width: 130px;
+
+  .quiz_complete_button{
+    width: 65px;
     height: 30px;
-    font-size: 16px;
-    border-radius: 15px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: none;
   }
   .quiz_complete_count {
     width: 1030px;
@@ -155,7 +152,6 @@
     padding: 0 10px;
     margin-bottom: 20px;
   }
-  
   .kakao {
     width: 140px;
     height: 40px;
@@ -192,6 +188,37 @@
     justify-content: center;
     margin-top: 10px;
   }
+  .quiz_complete_input_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  background: #FBE9E9;
+  
+}
+.quiz_complete_input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 620px;
+  height: 95px;
+  border-radius: 20px;
+  background: #FFC582;
+}
+.quiz_complete_input input{
+  border-radius: 15px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border:none;
+}
+.quiz_complete_input .quiz_comment {
+  color: #999;
+  box-shadow: none;
+  background: #FFC582;
+}
 
   .char, .word {
 	 display: inline-block;
@@ -225,11 +252,7 @@ particule {
 	 height: 30px;
 	 box-shadow: 1px 1px 4px #eb6383;
 }
-.quiz_complete_date{
-  background: #FBE9E9;
-  width: 400px;
-  height: 400px;
-}
+
   </style>
   
 
