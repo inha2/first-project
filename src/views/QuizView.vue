@@ -30,12 +30,13 @@
     >
       다음 문제
     </button>
+    <button [@click="goToQuizComplete" , @click="pop"]>pass</button>
   </div>
 </template>
 
 <script>
 import jsonData from "../assets/imageData.json";
-
+import {  } from "../views/QuizComplete.vue";
 export default {
   name: "quiz",
   data() {
@@ -47,6 +48,7 @@ export default {
       answered: false,
       isCorrect: false,
       showCorrectAnswer: false,
+      answerCount:0
     };
   },
   computed: {
@@ -64,6 +66,13 @@ export default {
         (correctAnswer) =>
           correctAnswer.toLowerCase() === this.answer.toLowerCase()
       );
+      console.log(isCorrect);
+      // 얘가 참이면 점수를 올려야돼 내려야돼?
+      // 그러면 이즈커렉트가 참일때 아까 엔서카운트가 ++ 되게 하면 되겠지?
+      // 그걸 조건문으로 써보세요 .
+      if(isCorrect == true){
+        this.answerCount++
+      }
       this.isCorrect = isCorrect;
       this.showCorrectAnswer = !isCorrect;
       this.answered = true;
@@ -92,7 +101,11 @@ export default {
       return array;
     },
     goToQuizComplete() {
-      this.$router.push("/quizComplete");
+      console.log(typeof 'answerCount');
+      this.$router.push({
+      path: '/quizComplete',
+      query: { data: this.answerCount }
+    });    
     },
   },
   created() {
@@ -157,3 +170,20 @@ export default {
   line-height: normal;
 }
 </style>
+
+
+<!-- 부모 컴포넌트
+<template>
+  <div>
+    <child-component :propName="dataValue"></child-component>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      dataValue: 'Hello, World!' // 부모 컴포넌트의 데이터
+    };
+  }
+};
+</script> -->
