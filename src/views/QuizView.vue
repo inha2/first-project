@@ -30,8 +30,8 @@
     >
       다음 문제
     </button>
-    <button [@click="goToQuizComplete" , @click="pop"]>pass</button>
-  </div>
+    <button @click="goToQuizComplete">pass</button>
+  </div> 
 </template>
 
 <script>

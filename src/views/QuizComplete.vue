@@ -21,12 +21,12 @@
         </div>
         <div>
             <div class="quiz_complete_input">
-                <input type="text" placeholder="내용을 입력하세요(최대 200자)">
+                <p>내용을 입력하세요(최대 200자)</p>
                 <input type="text" placeholder="닉네임">
                 <input type="text" placeholder="비밀번호">
                 <button @click="pop">작성하기</button>
             </div>
-            <div>
+            <div class="quiz_complete_date">
                 <span>닉네임</span>
                 <span>2023-07-04 09:23:56</span>
                 <span>재밌네요</span>
@@ -95,11 +95,10 @@
       }
     },
     mounted() {
-      Splitting();
+      this.pop(); // 폭죽 애니메이션 실행
     }
   };
-  </script>
-  <style>
+  </script>  <style>
   .quiz_complete {
     display: flex;
     flex-direction: column;
@@ -131,9 +130,13 @@
     gap: 30px;
     margin-top: 40px;
   }
+  .quiz_complete_input p{
+    color: #999;
+  }
   .quiz_complete_input input{
-    width: 170px;
+    width: 130px;
     height: 30px;
+    font-size: 16px;
     border-radius: 15px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -221,6 +224,11 @@ particule {
 	 width: 30px;
 	 height: 30px;
 	 box-shadow: 1px 1px 4px #eb6383;
+}
+.quiz_complete_date{
+  background: #FBE9E9;
+  width: 400px;
+  height: 400px;
 }
   </style>
   
