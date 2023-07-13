@@ -32,8 +32,7 @@ import '@/assets/Login.css'
   position: relative;
   align-items: center;
   width: 100%;
-  height: 900px;
-  padding: 20px;
+  height: 100vh;
 }
 .login1{
   width: 700px;

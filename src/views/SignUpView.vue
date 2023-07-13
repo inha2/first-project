@@ -27,10 +27,10 @@ export default {
   background-color: #FF9356;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
-  height: 900px;
-  padding-top: 70px;
+  height: 100vh;
 }
 .signup_text{
   width: 600px;

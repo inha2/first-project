@@ -20,10 +20,14 @@ export default {
 <style>
 @media screen and (min-width:769px){
 .signup{
+    background: #ff9356;
     display: flex;
     flex-direction: column;
     gap: 24px;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 .signup_button{
     display: flex;

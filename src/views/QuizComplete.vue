@@ -1,6 +1,6 @@
 <template>
     <div class="quiz_complete">
-        <img src="../assets/logo.png" alt="" />
+        <img src="../assets/ddaeng.png" alt="" />
         <span class="quiz_complete_count">{{ $route.query.data }}개 맞추셨습니다</span>
         <div class="quiz_complete_content">
             <p v-if="$route.query.data == 0">상위 100% 입니다!</p>
@@ -21,21 +21,28 @@
         </div>
         <div class="quiz_complete_input_wrap">
             <div class="quiz_complete_input">
-                <form action=""></form>
                 <div class="quiz_complete_textarea_content">
-                    <textarea name="comment" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="quiz_complete_input_content">
-                    <div class="quiz_complete_input_id">
-                        <input type="text" placeholder="닉네임" />
-                        <input type="text" placeholder="비밀번호" />
+                    <div class="quiz_complete_textarea_wrap">
+                        <textarea
+                            name="comment"
+                            id=""
+                            cols="20"
+                            rows="5"
+                            placeholder="내용을입력하세요(최대20자)"
+                        ></textarea>
                     </div>
-                    <div>
-                        <button class="quiz_complete_button">작성하기</button>
+                    <div class="quiz_complete_input_content">
+                        <div class="quiz_complete_input_id">
+                            <input type="text" placeholder="닉네임" />
+                            <input type="text" placeholder="비밀번호" />
+                        </div>
+                        <div>
+                            <button class="quiz_complete_button">작성하기</button>
+                        </div>
                     </div>
                 </div>
             </div>
-               <div class="quiz_complete_user">
+            <div class="quiz_complete_user">
                 <div class="quiz_complete_date">
                     <div class="quiz_complete_user_info_content">
                         <div>
@@ -196,7 +203,7 @@ export default {
         goToStart() {
             this.$router.push('/start')
         },
-        goToDelete(){
+        goToDelete() {
             alert('quiz_complete_input')
         },
     },
@@ -204,26 +211,42 @@ export default {
         this.pop() // 폭죽 애니메이션 실행
     },
 }
-// sddd왠가ㅡ줄어에 아민;안미;암니;ㅇ 삐야! 나중에 저거 맞게 ㅅ가이트 조정 해보자<
 </script>
 <style>
-@media screen and (min-width:769px){ 
-    .quiz_complete_input_id{
-        float: left;
-    }
-    .quiz_complete_textarea_content {
-        width: 100%;
-        height: 70px;
-    }
-    .quiz_complete_textarea_content textarea {
-        width: 720px;
-        height: 95px;
-        background: #ff9356;
-        border-radius: 20px;
-        margin-top: 30px;
+@media screen and (min-width: 769px) {
+    .quiz_complete_share {
         display: flex;
         justify-content: center;
-        text-align: center;
+        gap: 10px;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .quiz_complete_input_id {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .quiz_complete_input_content {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .quiz_complete_textarea_content {
+        margin-top: 24px;
+        width: 100%;
+        background: #ff9356;
+        border-radius: 20px;
+    }
+    .quiz_complete_textarea_wrap textarea {
+        width: 94%;
+        background: #ff9356;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        border: none;
+        padding: 20px;
+        resize: none;
     }
     .quiz_comment_wrap {
         display: flex;
@@ -257,6 +280,7 @@ export default {
         background-color: #ff9356;
         text-align: center;
         width: 100%;
+        height: 100vh;
     }
     .quiz_complete_user {
         /* margin: 0 auto; */
@@ -265,13 +289,14 @@ export default {
         background: #fbe9e9;
         margin-top: 40px;
         margin-bottom: 30px;
+        margin: 4px 0 30px 20px;
     }
     .fun {
         margin-right: 70px;
     }
     .quiz_complete img {
         width: 200px;
-        height: 120px;
+        height: 250px;
         margin-bottom: 20px;
     }
     .quiz_complete_content {
@@ -279,14 +304,31 @@ export default {
         width: 1030px;
         height: 358.356px;
         background: #ffb648;
+        font-weight: bold;
     }
-    
+
     .quiz_complete_button {
-        width: 65px;
-        height: 30px;
-        float: right;
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 20px;
+        background: #ff5c00;
+        box-shadow: 0px 4px 4px quiz_complete_input rgba(0, 0, 0, 0.25);
+        border: none;
+    }
+    .quiz_complete_button:hover {
+        cursor: pointer;
     }
     .quiz_complete_count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 1030px;
         height: 31px;
         background: #ffb648;
@@ -296,7 +338,6 @@ export default {
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        padding: 0 10px;
         margin-bottom: 20px;
     }
     .kakao {
@@ -314,9 +355,8 @@ export default {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
     }
-    
+
     .home {
         width: 120px;
         height: 40px;
@@ -333,7 +373,6 @@ export default {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin-top: 10px;
     }
     .quiz_complete_input_wrap {
         display: flex;
@@ -348,14 +387,15 @@ export default {
         flex-direction: column;
         justify-content: center;
         width: 720px;
-        height: 95px;
+        /* height: 95px; */
     }
     .quiz_complete_input input {
         border-radius: 15px;
         background: #fff;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         border: none;
-        margin-left: 20px;
+        padding: 10px;
+        /* margin-left: 20px; */
     }
     .quiz_complete_input .quiz_comment {
         color: #999;
@@ -398,12 +438,3 @@ particule {
     box-shadow: 1px 1px 4px #eb6383;
 }
 </style>
-
-<!-- console.clear();
-
- 
-
- 
-pop();
-window.setTimeout(render, 700);
-window.addEventListener('click', pop);

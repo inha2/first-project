@@ -5,7 +5,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 100vh;
     padding-top: 70px;
   }
   .signup_text{
@@ -39,8 +39,9 @@
     display: flex;
     justify-content: center;
     position: relative;
-
     padding-top: 70px;
+    width: 100%;
+    height: 100vh;
   }
   .signup_text{
     width: 300px;

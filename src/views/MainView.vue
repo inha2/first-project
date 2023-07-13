@@ -1,6 +1,6 @@
 <template>
     <div class="main_logo">
-      <img src="../assets/logo.png" alt="">
+      <img src="../assets/ddaeng.png" alt="">
       <button class="main-button" @click="goToLogin">로그인</button>
     </div>
 </template>
@@ -25,7 +25,7 @@ import '@/assets/Main.css'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .main_logo img {

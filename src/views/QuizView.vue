@@ -30,7 +30,6 @@
     >
       다음 문제
     </button>
-    <button @click="goToQuizComplete">pass</button>
   </div> 
 </template>
 
@@ -124,6 +123,7 @@ export default {
   justify-content: center;
   text-align: center;
   height: 100vh;
+  width: 100%;
   background-color: #FF9356;
 }
 .quiz-image {
