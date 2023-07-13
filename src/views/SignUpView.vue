@@ -1,6 +1,6 @@
 <template>
-  <div class="signup">
-    <div class="signup1">
+  <div class="quiz_signup">
+    <div class="signup_text">
       <input type="text" placeholder="아이디를 입력하세요.">
       <input type="text" placeholder="비밀번호를 입력하세요.">
       <input type="text" placeholder="비밀번호를 재입력하세요.">
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import '@/assets/Signup.css'
 export default {
   name: 'signUpComplete',
   methods:{
@@ -21,7 +22,8 @@ export default {
 
 </script>
 <style>
-.signup{
+@media screen and (min-width:769px){
+.quiz_signup{
   background-color: #FF9356;
   display: flex;
   justify-content: center;
@@ -30,7 +32,7 @@ export default {
   height: 900px;
   padding-top: 70px;
 }
-.signup1{
+.signup_text{
   width: 600px;
   height: 474px;
   border-radius: 20px;
@@ -43,7 +45,7 @@ export default {
   gap: 27px;
   flex-direction: column;
 }
-.signup1 input{
+.signup_text input{
   width: 200px;
   height: 50px;
   border-radius: 15px;
@@ -51,7 +53,8 @@ export default {
   border: none;
   padding: 0 30px;
 }
-.signup1 button{
+.signup_text button{
   margin-top: 20px;
+}
 }
 </style>

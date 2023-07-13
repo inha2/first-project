@@ -1,0 +1,36 @@
+@media screen and (max-width:768px){
+    .signup{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .signup_button{
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+    }
+    .login1{
+        width: 500px;
+        height: 500px;
+    }
+}
+@media screen and (max-width:390px){
+    .signup{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .signup_button{
+        display: flex;
+        justify-content: center;
+        width: 90px;
+        height: 90px;
+    }
+    .login1{
+        width: 300px;
+        height: 300px;
+    }
+}

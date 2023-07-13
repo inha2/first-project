@@ -10,6 +10,7 @@
 </div>
 </template>
 <script>
+import '@/assets/Start.css'
 export default {
     name:'quiz',
     methods:{
@@ -20,6 +21,7 @@ export default {
 }
 </script>
 <style>
+@media screen and (min-width:769px){
 .start{
     background-color: #FF9356;
     display: flex;
@@ -47,5 +49,6 @@ export default {
     justify-content: center;
     line-height: 50px;
     margin-bottom: 20px;
+}
 }
 </style>

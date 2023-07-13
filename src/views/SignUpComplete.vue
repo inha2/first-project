@@ -7,6 +7,7 @@
         </div>
 </template>
 <script>
+import '@/assets/SignUpComplete.css'
 export default {
     name:'main',
     methods:{
@@ -17,6 +18,7 @@ export default {
 }
 </script>
 <style>
+@media screen and (min-width:769px){
 .signup{
     display: flex;
     flex-direction: column;
@@ -26,5 +28,6 @@ export default {
 .signup_button{
     display: flex;
     justify-content: center;
+}
 }
 </style>

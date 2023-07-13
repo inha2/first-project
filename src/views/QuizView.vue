@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import '@/assets/Quiz.css'
 import jsonData from "../assets/imageData.json";
 import {  } from "../views/QuizComplete.vue";
 export default {
@@ -115,6 +116,7 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width:769px){
 .quiz-all {
   display: flex;
   flex-direction: column;
@@ -168,6 +170,7 @@ export default {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
 }
 </style>
 

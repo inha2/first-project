@@ -9,6 +9,7 @@
   </div>
 </template>
 <script>
+import '@/assets/Login.css'
   export default {
     name:'SignUpView',
     name:'StartView',
@@ -23,6 +24,7 @@
 }
 </script>
 <style>
+@media screen and (min-width:769px){
 .login{
   background-color: #FF9356;
   display: flex;
@@ -34,8 +36,8 @@
   padding: 20px;
 }
 .login1{
-  width: 600px;
-  height: 474px;
+  width: 700px;
+  height: 500px;
   flex-shrink: 0;
   border-radius: 20px;
   border: 1px solid #FF5C00;
@@ -49,7 +51,7 @@
   gap: 27px;
 }
 .login1 input{
-  width: 200px;
+  width: 300px;
   height: 50px;
   border-radius: 15px;
   background: #FFF;
@@ -65,5 +67,6 @@
   font-weight: 400;
   line-height: normal;
   margin-left: 200px;
+}
 }
 </style>

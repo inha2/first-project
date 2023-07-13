@@ -29,10 +29,6 @@
         "path": "hansohee.jpg"
       },
       {
-        "answer": ["한수아"],
-        "path": "hansooa.jpg"
-      },
-      {
         "answer": ["황정민"],
         "path": "hwangjeongmin.png"
       },
@@ -43,10 +39,6 @@
       {
         "answer": ["장원영"],
         "path": "jangwonyong.jpg"
-      },
-      {
-        "answer": ["강민"],
-        "path": "kangmin.jpg"
       },
       {
         "answer": ["김다미"],
@@ -73,7 +65,7 @@
         "path": "madongsuk.jpg"
       },
       {
-        "answer": ["박은진"],
+        "answer": ["박은빈"],
         "path": "parkeunjin.jpeg"
       },
       {
