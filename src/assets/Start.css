@@ -2,14 +2,14 @@
     .start {
         background-color: #ff9356;
         display: flex;
-        /* justify-content: center; */
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 100%;
         height: 100vh;
     }
     .start_img {
-        width: 400px;
+        width: 250px;
         height: 300px;
         padding-bottom: 10px;
     }
@@ -24,8 +24,8 @@
         text-align: center;
         display: flex;
         justify-content: center;
-        line-height: 50px;
         margin-bottom: 20px;
+        line-height: 30px;
     }
     .start button {
         width: 100px;
@@ -51,15 +51,14 @@
     .start_quiz {
         font-size: 15px;
         width: 300px;
-        height: 200px;
+        height: 150px;
         background-color: #ffc582;
         border-radius: 20px;
         position: relative;
-        padding-top: 20px;
         text-align: center;
         display: flex;
         justify-content: center;
-        line-height: 50px;
         margin-bottom: 20px;
+        line-height: 30px;
     }
 }

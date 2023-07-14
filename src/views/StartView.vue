@@ -2,7 +2,7 @@
     <div class="start">
         <img class="start_img" src="../assets/ddaeng.png" alt="" />
         <div class="start_quiz">
-            종합 인물 퀴즈!! 종합 인물 퀴즈 인물 사진을 보고 어떤 사람인지 맞히시면 됩니다. 정치인, 연예인, 역사인물,
+            종합 인물 퀴즈!! 종합 인물 퀴즈 인물 사진을 보고<br> 어떤 사람인지 맞히시면 됩니다.<br> 정치인, 연예인, 역사인물,
             인플루언서 등 <br />많은 인물이 종합적으로 등록되어있습니다!
         </div>
         <button @click="goToQuiz">게임시작</button>
@@ -46,8 +46,8 @@ export default {
         text-align: center;
         display: flex;
         justify-content: center;
-        line-height: 50px;
         margin-bottom: 20px;
+        line-height: 30px;
     }
 }
 </style>

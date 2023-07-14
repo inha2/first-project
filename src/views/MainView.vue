@@ -26,11 +26,12 @@ import '@/assets/Main.css'
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
 }
 
 .main_logo img {
-  width: 900px;
-  height: 100%;
+  width: 700px;
+  height: 500px;
   padding: 20px;
 }
 

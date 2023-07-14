@@ -299,7 +299,6 @@ particule {
         display: flex;
         flex-direction: column;
         background: #fbe9e9;
-        padding: 0px 10px;
     }
     .fun {
         margin-right: 70px;

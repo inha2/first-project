@@ -1,93 +1,108 @@
 {
     "data": [
-      {
-        "answer": ["채령"],
-        "path": "cheryung.jpg"
-      },
-      {
-        "answer": ["채원"],
-        "path": "chewon.jpeg"
-      },
-      {
-        "answer": ["최예나"],
-        "path": "choiyena.jpg"
-      },
-      {
-        "answer": ["공유"],
-        "path": "gongyou.jpg"
-      },
-      {
-        "answer": ["권상우"],
-        "path": "gwonsangwoo.jpg"
-      },
-      {
-        "answer": ["하정우"],
-        "path": "hajeongwoo.jpg"
-      },
-      {
-        "answer": ["한소희"],
-        "path": "hansohee.jpg"
-      },
-      {
-        "answer": ["황정민"],
-        "path": "hwangjeongmin.png"
-      },
-      {
-        "answer": ["아이린"],
-        "path": "irin.jpeg"
-      },
-      {
-        "answer": ["장원영"],
-        "path": "jangwonyong.jpg"
-      },
-      {
-        "answer": ["김다미"],
-        "path": "kimdami.jpg"
-      },
-      {
-        "answer": ["김고은"],
-        "path": "kimgoeun.jpg"
-      },
-      {
-        "answer": ["김수현"],
-        "path": "kimsoohyun.jpg"
-      },
-      {
-        "answer": ["김태리"],
-        "path": "kimtaelee.jpg"
-      },
-      {
-        "answer": ["이정재"],
-        "path": "leejeongjae.jpg"
-      },
-      {
-        "answer": ["마동석"],
-        "path": "madongsuk.jpg"
-      },
-      {
-        "answer": ["박은빈"],
-        "path": "parkeunjin.jpeg"
-      },
-      {
-        "answer": ["박나래"],
-        "path": "parknarae.jpeg"
-      },
-      {
-        "answer": ["설아"],
-        "path": "seola.jpg"
-      },
-      {
-        "answer": ["뷔", "브이"],
-        "path": "v.jpg"
-      },
-      {
-        "answer": ["윌 스미스", "윌스미스", "will smith"],
-        "path": "willsmith.jpg"
-      },
-      {
-        "answer": ["윤아"],
-        "path": "yoona.jpg"
-      }
+        {
+            "answer": ["채령"],
+            "path": "cheryung.jpg"
+        },
+        {
+            "answer": ["채원"],
+            "path": "chewon.jpeg"
+        },
+        {
+            "answer": ["최예나"],
+            "path": "choiyena.jpg"
+        },
+        {
+            "answer": ["공유"],
+            "path": "gongyou.jpg"
+        },
+        {
+            "answer": ["권상우"],
+            "path": "gwonsangwoo.jpg"
+        },
+        {
+            "answer": ["하정우"],
+            "path": "hajeongwoo.jpg"
+        },
+        {
+            "answer": ["한소희"],
+            "path": "hansohee.jpg"
+        },
+        {
+            "answer": ["황정민"],
+            "path": "hwangjeongmin.png"
+        },
+        {
+            "answer": ["아이린"],
+            "path": "irin.jpeg"
+        },
+        {
+            "answer": ["장원영"],
+            "path": "jangwonyong.jpg"
+        },
+        {
+            "answer": ["김다미"],
+            "path": "kimdami.jpg"
+        },
+        {
+            "answer": ["김고은"],
+            "path": "kimgoeun.jpg"
+        },
+        {
+            "answer": ["김수현"],
+            "path": "kimsoohyun.jpg"
+        },
+        {
+            "answer": ["김태리"],
+            "path": "kimtaelee.jpg"
+        },
+        {
+            "answer": ["이정재"],
+            "path": "leejeongjae.jpg"
+        },
+        {
+            "answer": ["마동석"],
+            "path": "madongsuk.jpg"
+        },
+        {
+            "answer": ["박은빈"],
+            "path": "parkeunjin.jpeg"
+        },
+        {
+            "answer": ["박나래"],
+            "path": "parknarae.jpeg"
+        },
+        {
+            "answer": ["설아"],
+            "path": "seola.jpg"
+        },
+        {
+            "answer": ["뷔", "브이"],
+            "path": "v.jpg"
+        },
+        {
+            "answer": ["윌 스미스", "윌스미스", "will smith"],
+            "path": "willsmith.jpg"
+        },
+        {
+            "answer": ["윤아"],
+            "path": "yoona.jpg"
+        },
+        {
+            "answer": ["윈터"],
+            "path": "winter.jpeg"
+        },
+        {
+            "answer": ["해린"],
+            "path": "haerin.jpeg"
+        },
+        {
+            "answer": ["조이"],
+            "path": "joy.jpeg"
+        },
+        {
+            "answer": ["브루노마스", "Bruno Mars"],
+            "path": "brunomars.jpeg"
+        }
     ]
-  }
-  
+}

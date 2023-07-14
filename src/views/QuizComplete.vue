@@ -29,97 +29,36 @@
                             cols="20"
                             rows="5"
                             placeholder="내용을입력하세요(최대20자)"
+                            v-model="content"
                         ></textarea>
                     </div>
                     <div class="quiz_complete_input_content">
                         <div class="quiz_complete_input_id">
-                            <input type="text" placeholder="닉네임" />
-                            <input type="text" placeholder="비밀번호" />
+                            <input v-model="nickName" type="text" placeholder="닉네임" />
+                            <input v-model="password" type="password" placeholder="비밀번호" />
                         </div>
                         <div>
-                            <button class="quiz_complete_button">작성하기</button>
+                            <button @click="submitComment" class="quiz_complete_button">작성하기</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="quiz_complete_user">
+            <div v-for="comment in comments" :key="comment.createdAt" class="quiz_complete_user">
                 <div class="quiz_complete_date">
                     <div class="quiz_complete_user_info_content">
                         <div>
-                            <span>인하</span>
+                            <span>{{ comment.nickname }}</span>
                         </div>
                         <div>
-                            <span>2023-07-04 09:23:56</span>
+                            <span>{{ comment.createdAt }}</span>
                         </div>
                     </div>
                     <div>
-                        <img @click="goToDelete" class="siren" src="../images/ic_siren.webp" alt="" />
+                        <img @click="goToDelete(comment)" class="siren" src="../images/ic_siren.webp" alt="" />
                     </div>
                 </div>
                 <div class="quiz_comment_wrap">
-                    <span class="fun">재밌네요</span>
-                    <svg
-                        viewBox="64 64 896 896"
-                        focusable="false"
-                        data-icon="delete"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
-                        ></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="quiz_complete_user">
-                <div class="quiz_complete_date">
-                    <div class="quiz_complete_user_info_content">
-                        <div>
-                            <span>기하</span>
-                        </div>
-                        <div>
-                            <span>2023-07-04 09:23:56</span>
-                        </div>
-                    </div>
-                    <div>
-                        <img @click="goToDelete" class="siren" src="../images/ic_siren.webp" alt="" />
-                    </div>
-                </div>
-                <div class="quiz_comment_wrap">
-                    <span class="fun">양파나 껴!!!!!!!!!!!!!!!!!!!!!!</span>
-                    <svg
-                        viewBox="64 64 896 896"
-                        focusable="false"
-                        data-icon="delete"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
-                        ></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="quiz_complete_user">
-                <div class="quiz_complete_date">
-                    <div class="quiz_complete_user_info_content">
-                        <div>
-                            <span>해민</span>
-                        </div>
-                        <div>
-                            <span>2023-07-04 09:23:56</span>
-                        </div>
-                    </div>
-                    <div>
-                        <img @click="goToDelete" class="siren" src="../images/ic_siren.webp" alt="" />
-                    </div>
-                </div>
-                <div class="quiz_comment_wrap">
-                    <span class="fun">난 너무 예뻐!</span>
+                    <span class="fun">{{ comment.content }}</span>
                     <svg
                         viewBox="64 64 896 896"
                         focusable="false"
@@ -141,11 +80,31 @@
 <script>
 import Splitting from 'splitting'
 import '@/assets/QuizComplete.css'
+import firebase from 'firebase/compat/app' // 변경된 import 문
+import 'firebase/compat/database'
+import moment from 'moment'
+
+const firebaseConfig = {
+    apiKey: 'AIzaSyBl2IJvyVq9x_0ZlLGChjssFOn9xNiUqKE',
+    authDomain: 'ddaeng-fbba2.firebaseapp.com',
+    databaseURL: 'https://ddaeng-fbba2-default-rtdb.firebaseio.com',
+    projectId: 'ddaeng-fbba2',
+    storageBucket: 'ddaeng-fbba2.appspot.com',
+    messagingSenderId: '978175736639',
+    appId: '1:978175736639:web:29475ec7fd809f9c7eb18a',
+}
+
+firebase.initializeApp(firebaseConfig)
+
 export default {
     data() {
         return {
             particles: [],
             colors: ['#eb6383', '#fa9191', '#ffe9c5', '#b4f2e1'],
+            nickName: '',
+            password: '',
+            content: '',
+            comments: [],
         }
     },
     methods: {
@@ -206,8 +165,35 @@ export default {
         goToDelete() {
             alert('quiz_complete_input')
         },
+        submitComment() {
+            const commentsRef = firebase.database().ref('comments')
+            const now = moment().format('YYYY-MM-DD HH:mm:ss')
+            const newCommentRef = commentsRef.push()
+            let response = []
+            newCommentRef.set({
+                content: this.content,
+                nickname: this.nickName,
+                password: this.password,
+                createdAt: now,
+            })
+            alert('댓글이 저장되었습니다.')
+            commentsRef.on('child_added', async (snapshot) => {
+                await this.initCommentList()
+                await this.comments.push(snapshot.val())
+            })
+        },
+        initComment() {
+            const commentsRef = firebase.database().ref('comments')
+            commentsRef.on('child_added', (snapshot) => {
+                this.comments.push(snapshot.val())
+            })
+        },
+        initCommentList() {
+            this.comments = []
+        },
     },
     mounted() {
+        this.initComment()
         this.pop() // 폭죽 애니메이션 실행
     },
 }

@@ -93,13 +93,14 @@ export default {
       const shuffledImages = this.shuffleArray(this.jsonData.data);
       this.images = shuffledImages.slice(0, 10);
     },
-    shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    },
+     shuffleArray(array) {
+  const newArray = array.slice(); // 기존 배열을 수정하지 않도록 복사본 생성
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+},
     goToQuizComplete() {
       console.log(typeof 'answerCount');
       this.$router.push({

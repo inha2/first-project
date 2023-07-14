@@ -4,8 +4,10 @@
         flex-direction: column;
         gap: 24px;
         align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100vh;
+        background: #FF9356;
     }
     .signup_button{
         display: flex;
@@ -14,8 +16,8 @@
         height: 100px;
     }
     .login1{
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
     }
 }
 @media screen and (max-width:390px){
