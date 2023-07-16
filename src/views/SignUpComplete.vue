@@ -7,8 +7,6 @@
     </div>
 </template>
 <script>
-import { initializeApp } from 'firebase/app'
-
 import '@/assets/SignUpComplete.css'
 export default {
     name: 'main',
