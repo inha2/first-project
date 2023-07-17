@@ -282,7 +282,7 @@ export default {
     }
     .quiz_complete img {
         width: 200px;
-        height: 250px;
+        height: 150px;
         margin-bottom: 20px;
     }
     .quiz_complete_content {
@@ -291,6 +291,7 @@ export default {
         height: 358.356px;
         background: #ffb648;
         font-weight: bold;
+        font-size: 20px;
     }
 
     .quiz_complete_button {
@@ -316,10 +317,10 @@ export default {
         justify-content: center;
         align-items: center;
         width: 1030px;
-        height: 31px;
+        height: 35px;
         background: #ffb648;
         color: #fff;
-        font-size: 20px;
+        font-size: 30px;
         font-family: Inter;
         font-style: normal;
         font-weight: 700;
@@ -366,6 +367,7 @@ export default {
         justify-content: center;
         align-items: center;
         width: 100%;
+        /* height: 100vh; */
         background: #fbe9e9;
     }
     .quiz_complete_input {

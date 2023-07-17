@@ -1,4 +1,10 @@
 @media screen and (max-width:768px){
+      .error{
+        color: red;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .login{
         background-color: #FF9356;
         display: flex;
@@ -43,6 +49,12 @@
       }
       }
 @media screen and (max-width:390px){
+    .error{
+        color: red;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+    }
     .login{
         background-color: #FF9356;
         display: flex;

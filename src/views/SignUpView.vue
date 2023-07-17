@@ -2,7 +2,9 @@
     <div class="quiz_signup">
         <div class="signup_text">
             <input v-model="email" type="email" placeholder="이메일을 입력하세요." />
-            <p v-if="showEmailError" class="error">이메일 형식이 틀렸습니다.</p>
+            <div class="error_box">
+                <p v-if="showEmailError" class="error">이메일 형식이 틀렸습니다.</p>
+            </div>
             <input v-model="password" type="password" placeholder="비밀번호를 입력하세요." />
             <input v-model="checkPassword" type="password" placeholder="비밀번호를 재입력하세요." />
             <p v-if="isConfirmPassword" class="error">비밀번호가 일치하지않습니다.</p>
@@ -103,8 +105,8 @@ export default {
         height: 100vh;
     }
     .signup_text {
-        width: 600px;
-        height: 474px;
+        width: 700px;
+        height: 500px;
         border-radius: 20px;
         border: 1px solid #ff5c00;
         background: #ffc582;
@@ -116,7 +118,7 @@ export default {
         flex-direction: column;
     }
     .signup_text input {
-        width: 200px;
+        width: 300px;
         height: 50px;
         border-radius: 15px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -125,6 +127,11 @@ export default {
     }
     .signup_text button {
         margin-top: 20px;
+    }
+    .error {
+        color: red;
+        padding: 0;
+        margin: 0;
     }
 }
 </style>

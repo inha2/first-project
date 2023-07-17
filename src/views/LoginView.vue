@@ -1,8 +1,10 @@
 <template>
     <div class="login">
         <div class="login1">
-            <input class="아오.." v-model="email" type="email" placeholder="이메일을 입력하세요." />
-            <p v-if="showEmailError" class="error">이메일형식이 틀렸습니다.</p>
+            <input class="login_email" v-model="email" type="email" placeholder="이메일을 입력하세요." />
+            <div class="login_error">
+                <p v-if="showEmailError" class="error">이메일형식이 틀렸습니다.</p>
+            </div>
             <input v-model="password" type="password" placeholder="비밀번호를 입력하세요." />
             <p class="login-signup" @click="goToSignUp">회원가입 ></p>
             <button @click="login">로그인</button>
@@ -68,6 +70,17 @@ export default {
 </script>
 <style>
 @media screen and (min-width: 769px) {
+    .login_email{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    .error {
+        color: red;
+        margin: 0;
+        padding:0 ;
+    }
     .login {
         background-color: #ff9356;
         display: flex;
@@ -90,7 +103,9 @@ export default {
         align-items: center;
         text-align: center;
         flex-direction: column;
-        gap: 27px;
+        gap: 20px;
+        margin: 0 auto;
+        display: flex;
     }
     .login1 input {
         width: 300px;
