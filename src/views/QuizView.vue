@@ -11,7 +11,7 @@
     </div>
     <p v-if="answered">
       <span v-if="isCorrect">정답입니다!</span>
-      <span v-else>오답입니다!</span>
+      <span v-else >땡!</span>
     </p>
     <p v-if="showCorrectAnswer">
       정답은 "{{ getCorrectAnswer().join(", ") }}"입니다.

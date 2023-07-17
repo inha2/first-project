@@ -1,9 +1,25 @@
 @media screen and (max-width:768px){
-      .error{
+      .login-email-input-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .login-email-input-wrap div {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .login_email {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .error {
         color: red;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        font-size: 15px;
     }
     .login{
         background-color: #FF9356;
@@ -49,11 +65,27 @@
       }
       }
 @media screen and (max-width:390px){
-    .error{
+      .login-email-input-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .login-email-input-wrap div {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .login_email {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .error {
         color: red;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
     }
     .login{
         background-color: #FF9356;

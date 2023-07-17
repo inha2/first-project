@@ -28,7 +28,7 @@
         border-radius: 20px;
     }
     .quiz_complete_textarea_wrap textarea {
-        width: 94%;
+        width: 90%;
         background: #ff9356;
         border-radius: 20px;
         display: flex;
@@ -50,7 +50,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 720px;
+        width: 100%;
         margin-top: 20px;
     }
 
@@ -87,7 +87,7 @@
     }
     .quiz_complete_content {
         margin-bottom: 20px;
-        width: 700px;
+        width: 100%;
         height: 358.356px;
         background: #ffb648;
         font-weight: bold;
@@ -115,7 +115,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 700px;
+        width: 100%;
         height: 31px;
         background: #ffb648;
         color: #fff;
@@ -172,7 +172,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 720px;
+        width: 100%;
         /* height: 95px; */
     }
     .quiz_complete_input input {
@@ -250,7 +250,7 @@ particule {
         border-radius: 20px;
     }
     .quiz_complete_textarea_wrap textarea {
-        width: 89%;
+        width: 85%;
         background: #ff9356;
         border-radius: 20px;
         display: flex;
