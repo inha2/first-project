@@ -1,9 +1,11 @@
 <template>
     <div class="quiz_signup">
         <div class="signup_text">
+            <div class="login-email-input-wrap">
             <input v-model="email" type="email" placeholder="이메일을 입력하세요." />
-            <div class="error_box">
-                <p v-if="showEmailError" class="error">이메일 형식이 틀렸습니다.</p>
+                <div>
+                    <p v-if="showEmailError" class="error">이메일 형식이 틀렸습니다.</p>
+                </div>
             </div>
             <input v-model="password" type="password" placeholder="비밀번호를 입력하세요." />
             <input v-model="checkPassword" type="password" placeholder="비밀번호를 재입력하세요." />
@@ -132,6 +134,22 @@ export default {
         color: red;
         padding: 0;
         margin: 0;
+    }
+    .login-email-input-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .login-email-input-wrap div {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .login_email {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 </style>

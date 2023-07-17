@@ -1,9 +1,11 @@
 <template>
     <div class="login">
         <div class="login1">
-            <input class="login_email" v-model="email" type="email" placeholder="이메일을 입력하세요." />
-            <div class="login_error">
-                <p v-if="showEmailError" class="error">이메일형식이 틀렸습니다.</p>
+            <div class="login-email-input-wrap">
+                <input class="login_email" v-model="email" type="email" placeholder="이메일을 입력하세요." />
+                <div>
+                    <p v-if="showEmailError" class="error">이메일형식이 틀렸습니다.</p>
+                </div>
             </div>
             <input v-model="password" type="password" placeholder="비밀번호를 입력하세요." />
             <p class="login-signup" @click="goToSignUp">회원가입 ></p>
@@ -70,16 +72,27 @@ export default {
 </script>
 <style>
 @media screen and (min-width: 769px) {
-    .login_email{
+    .login-email-input-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .login-email-input-wrap div {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .login_email {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    
     }
     .error {
         color: red;
         margin: 0;
-        padding:0 ;
+        padding: 0;
+        font-size: 15px;
     }
     .login {
         background-color: #ff9356;
